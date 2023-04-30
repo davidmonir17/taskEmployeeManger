@@ -1,14 +1,17 @@
 <ng-container >
-  <div>
-  <mat-card>
+  <div *ngFor="let emp of employees">
+  <mat-card id="{{emp.id}}">
     <mat-card-header>
-      <mat-card-title>Actions Buttons</mat-card-title>
-      <mat-card-subtitle>End</mat-card-subtitle>
+      <mat-card-title>{{emp.email}} </mat-card-title>
+      <mat-card-subtitle>{{emp.name}}</mat-card-subtitle>
+      <mat-card-subtitle>{{emp.phone}}</mat-card-subtitle>
+      <mat-card-subtitle>{{emp.departmentName}}</mat-card-subtitle>
     </mat-card-header>
     <mat-card-actions align="end">
-      <button mat-button>LIKE</button>
-      <button mat-button>SHARE</button>
+      <button mat-button>Edit</button>
+      <button mat-button>Delete</button>
     </mat-card-actions>
   </mat-card>
 </div>
 </ng-container>
+ 
